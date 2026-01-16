@@ -40,6 +40,11 @@ jobs:
         id: tag
         run: echo "IMAGE_TAG=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
       
+      # 4b. Aggiorna versione tag nell'index.html
+      - name: Update version in HTML
+        run: |
+          sed -i "s/number/v${{ steps.tag.outputs.IMAGE_TAG }}/" app/index.html
+
       # 5. Build e push immagine Docker
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
