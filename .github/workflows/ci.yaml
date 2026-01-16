@@ -4,7 +4,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main  # Solo su push a main
+      - master  # Solo su push a main
     paths:
       - 'app/**'  # Solo se cambia qualcosa in app/
 
