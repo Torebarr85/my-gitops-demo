@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: salvatorebarretta14/my-cats-app
-  tag: latest
+  tag: 1d55ecb
   pullPolicy: IfNotPresent
 
 service:
